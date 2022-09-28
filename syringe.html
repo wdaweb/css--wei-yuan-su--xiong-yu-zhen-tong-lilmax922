@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=0, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-family: '微軟正黑體';
+    }
+
+    .syringe {
+      /* 長針筒 */
+      width: 600px;
+      height: 80px;
+      border: 1px solid #888;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: linear-gradient(180deg, white 10%, rgb(213, 203, 203) 70%, white 100%);
+      border-radius: 0 10px 10px 0;
+    }
+
+    .syringe::before {
+      /* 短針筒 */
+      content: "";
+      width: 500px;
+      height: 150px;
+      border: 1px solid #888;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-image: linear-gradient(90deg, white 45%, black 45%, black 55%, rgb(236, 236, 149) 55%);
+    }
+
+    .syringe::after {
+      /* 按鈕頭 */
+      content: "";
+      width: 50px;
+      height: 150px;
+      border: 1px solid #888;
+      position: absolute;
+      left: -52px;
+      top: 50%;
+      transform: translate(0, -50%);
+      border-radius: 10px 10px 10px 10px;
+      background-image: linear-gradient(180deg, white 3%, rgb(213, 203, 203) 65%, white 100%);
+    }
+
+
+    .needle::before {
+      /* 針頭 */
+      content: "";
+      width: 100px;
+      height: 0.1px;
+      border: 1px solid #888;
+      background-color: #888;
+      position: absolute;
+      left: 602px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .needle {
+      /* 短針筒的漸層 */
+      width: 500px;
+      height: 150px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 3%, rgb(0, 0, 0, 0.15) 65%, rgba(0, 0, 0, 0) 100%);
+      line-height: 280px;
+      /* 字體的高度 */
+      color: rgb(164, 164, 164);
+    }
+
+    .needle::after {
+      /* 刻度 */
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 7.5px;
+      transform: translate(-50%, -50%);
+      width: 500px;
+      height: 15px;
+      background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 65%, rgba(180, 130, 130, 0.5) 75%, rgba(0, 0, 0, 0) 85%);
+      background-size: 25px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="syringe">
+    <div class="needle">Made in Taiwan
+    </div>
+  </div>
+</body>
+
+</html>
